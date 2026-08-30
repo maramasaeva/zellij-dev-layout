@@ -18,7 +18,7 @@ new to zellij? it's a terminal multiplexer (like tmux): one terminal window, spl
 | `voice` | single pane |
 | `scratch` | single pane |
 
-every tab has the tab bar on top and the status bar at the bottom. (yes, the tab names are mine — renaming them is step one of making it yours, see below.)
+every tab has the tab bar on top and the status bar at the bottom. (yes, the tab names are mine. rename them ! see below.)
 
 ## 1. install zellij (if you don't have it)
 
