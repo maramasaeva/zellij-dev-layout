@@ -1,0 +1,66 @@
+layout {
+    // Tab bar at top, status bar at bottom, on every tab
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    // Main workspace: one big pane on the left, two stacked on the right
+    tab name="messier" focus=true {
+        pane split_direction="vertical" {
+            pane {
+                cwd "~"
+            }
+            pane split_direction="horizontal" {
+                pane {
+                    cwd "~"
+                }
+                pane {
+                    cwd "~"
+                }
+            }
+        }
+    }
+
+    // Two panes side by side
+    tab name="mara" {
+        pane split_direction="vertical" {
+            pane {
+                cwd "~"
+            }
+            pane {
+                cwd "~"
+            }
+        }
+    }
+
+    // Two panes stacked — point cwd at a project directory
+    tab name="test" {
+        pane split_direction="horizontal" {
+            pane {
+                cwd "~"
+            }
+            pane {
+                cwd "~"
+            }
+        }
+    }
+
+    // Single-pane tabs
+    tab name="voice" {
+        pane {
+            cwd "~"
+        }
+    }
+
+    tab name="scratch" {
+        pane {
+            cwd "~"
+        }
+    }
+}
