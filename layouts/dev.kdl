@@ -1,4 +1,8 @@
 layout {
+    // Default working directory for every pane. Change it, or override
+    // per pane with its own cwd (see the "test" tab below).
+    cwd "~"
+
     // Tab bar at top, status bar at bottom, on every tab
     default_tab_template {
         pane size=1 borderless=true {
@@ -12,22 +16,14 @@ layout {
 
     // ── TABS ──────────────────────────────────────────────────────
     // To rename a tab, just edit the name="..." value on its line.
-    // To point a pane at a project, change its cwd "~" to a path
-    // like cwd "~/code/my-project".
 
     // Main workspace: one big pane on the left, two stacked on the right
     tab name="messier" focus=true {
         pane split_direction="vertical" {
-            pane {
-                cwd "~"
-            }
+            pane
             pane split_direction="horizontal" {
-                pane {
-                    cwd "~"
-                }
-                pane {
-                    cwd "~"
-                }
+                pane
+                pane
             }
         }
     }
@@ -35,37 +31,29 @@ layout {
     // Two panes side by side
     tab name="mara" {
         pane split_direction="vertical" {
-            pane {
-                cwd "~"
-            }
-            pane {
-                cwd "~"
-            }
+            pane
+            pane
         }
     }
 
-    // Two panes stacked — point cwd at a project directory
+    // Two panes stacked. To open a tab in a project directory,
+    // give its panes a cwd, e.g.:
+    //     pane {
+    //         cwd "~/code/my-project"
+    //     }
     tab name="test" {
         pane split_direction="horizontal" {
-            pane {
-                cwd "~"
-            }
-            pane {
-                cwd "~"
-            }
+            pane
+            pane
         }
     }
 
     // Single-pane tabs
     tab name="voice" {
-        pane {
-            cwd "~"
-        }
+        pane
     }
 
     tab name="scratch" {
-        pane {
-            cwd "~"
-        }
+        pane
     }
 }

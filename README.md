@@ -87,13 +87,15 @@ change the text between the quotes, re-run `./install.sh` (or copy the file over
 
 ### point tabs at your projects
 
-every pane has a `cwd "~"` (the directory it opens in). change it to wherever you actually work:
+by default every pane opens in your home directory (the single `cwd "~"` at the top of the layout). to open a pane somewhere else, give it its own `cwd`:
 
 ```kdl
 pane {
     cwd "~/code/my-project"
 }
 ```
+
+you can also change the top-level `cwd "~"` to move the default for *all* panes at once.
 
 ### change the splits, add tabs
 
