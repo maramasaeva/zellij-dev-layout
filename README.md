@@ -1,6 +1,6 @@
 # zellij-dev-layout
 
-my [zellij](https://zellij.dev) dev layout — five tabs, opened the way i want them, with one command:
+my [zellij](https://zellij.dev) dev layout :
 
 ```sh
 zellij -l dev
