@@ -10,6 +10,11 @@ layout {
         }
     }
 
+    // ── TABS ──────────────────────────────────────────────────────
+    // To rename a tab, just edit the name="..." value on its line.
+    // To point a pane at a project, change its cwd "~" to a path
+    // like cwd "~/code/my-project".
+
     // Main workspace: one big pane on the left, two stacked on the right
     tab name="messier" focus=true {
         pane split_direction="vertical" {
