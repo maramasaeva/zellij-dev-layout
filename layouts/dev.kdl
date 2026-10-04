@@ -1,6 +1,5 @@
 layout {
-    // Default working directory for every pane; panes below only
-    // set cwd when they need something else.
+    // Default working directory for every pane.
     cwd "~"
 
     // Add tab-bar at top and status-bar at bottom
@@ -33,24 +32,16 @@ layout {
 
     tab name="test" {
         pane split_direction="horizontal" {
-            pane {
-                cwd "~/Documents/Cursor/chatgpt-connectors/chatgpt-connectors"
-            }
-            pane {
-                cwd "~/Documents/Cursor/chatgpt-connectors/chatgpt-connectors"
-            }
+            pane
+            pane
         }
     }
 
     tab name="voice" {
-        pane {
-            cwd "~/Desktop"
-        }
+        pane
     }
 
     tab name="scratch" {
-        pane {
-            cwd "~/Documents/Cursor"
-        }
+        pane
     }
 }
