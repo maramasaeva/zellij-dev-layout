@@ -1,9 +1,9 @@
 layout {
-    // Default working directory for every pane. Change it, or override
-    // per pane with its own cwd (see the "test" tab below).
+    // Default working directory for every pane; panes below only
+    // set cwd when they need something else.
     cwd "~"
 
-    // Tab bar at top, status bar at bottom, on every tab
+    // Add tab-bar at top and status-bar at bottom
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
@@ -14,10 +14,6 @@ layout {
         }
     }
 
-    // ── TABS ──────────────────────────────────────────────────────
-    // To rename a tab, just edit the name="..." value on its line.
-
-    // Main workspace: one big pane on the left, two stacked on the right
     tab name="messier" focus=true {
         pane split_direction="vertical" {
             pane
@@ -28,7 +24,6 @@ layout {
         }
     }
 
-    // Two panes side by side
     tab name="mara" {
         pane split_direction="vertical" {
             pane
@@ -36,24 +31,26 @@ layout {
         }
     }
 
-    // Two panes stacked. To open a tab in a project directory,
-    // give its panes a cwd, e.g.:
-    //     pane {
-    //         cwd "~/code/my-project"
-    //     }
     tab name="test" {
         pane split_direction="horizontal" {
-            pane
-            pane
+            pane {
+                cwd "~/Documents/Cursor/chatgpt-connectors/chatgpt-connectors"
+            }
+            pane {
+                cwd "~/Documents/Cursor/chatgpt-connectors/chatgpt-connectors"
+            }
         }
     }
 
-    // Single-pane tabs
     tab name="voice" {
-        pane
+        pane {
+            cwd "~/Desktop"
+        }
     }
 
     tab name="scratch" {
-        pane
+        pane {
+            cwd "~/Documents/Cursor"
+        }
     }
 }
